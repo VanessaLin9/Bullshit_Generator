@@ -1,0 +1,73 @@
+<!--  ./views/index.handlebars -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-10 col-12 mx-auto">
+      <div class="columns">
+
+        <div class="columns">
+          <div class="d-flex justify-content-center">
+            <h2>你想對誰講幹話?</h2>
+          </div>
+        </div>
+
+      <form method="POST" action="/">
+        <div class="row justify-content-center">
+
+            <div class="card m-2" style="max-width: 14rem">
+              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" style="height:14rem  object-fit: cover;" alt="工程師">
+              <div class="card-body">
+                <div class="form-group card-footer" style="border: 1px solid rgba(0,0,0,.125); text-align: center;">
+                  <input class="form-check-input" type="radio" name="occupation" id="occupation" value="engineer">
+                  <label class="form-check-label ml-3" for="engineer">
+                    工程師
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card m-2" style="max-width: 14rem;">
+              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"    class="card-img-top"
+                alt="設計師">
+                <div class="card-body">
+                  <div class="form-group card-footer" style="border: 1px solid rgba(0,0,0,.125); text-align: center;">
+                    <input class="form-check-input" type="radio" name="occupation" id="occupation" value="designer">
+                    <label class="form-check-label ml-3" for="designer">
+                      設計師
+                    </label>
+                  </div>                
+                </div>
+            </div>
+
+            <div class="card m-2" style="max-width: 14rem;">
+              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top"
+                alt="創業家">
+              <div class="card-body">
+                <div class="form-group card-footer" style="border: 1px solid rgba(0,0,0,.125); text-align: center;">
+                  <input class="form-check-input" type="radio" name="occupation" id="occupation" value="entrepreneur">
+                  <label class="form-check-label ml-3" for="entrepreneur">
+                    創業家
+                  </label>
+                </div>
+              </div>
+          </div> 
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+          <button type="submit" class="btn btn-primary btn-sm">產生幹話</button>
+          <div class="alert alert-info" role="alert" style="min-width: 70%; margin: 3px; height: 50px;">
+            {{#if bullshit}}
+            身為{{occupation}}, <code style= "  color: #0c5460;font-size: 100%;">{{bullshit}}</code>
+            {{/if}}
+          </div>
+         
+        </div>
+
+      </form>
+
+      </div>
+    </div>
+  </div>
+</div>
